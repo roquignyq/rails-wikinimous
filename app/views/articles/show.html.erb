@@ -1,0 +1,15 @@
+<div class="container text-justify articles">
+  <h1>Your article</h1>
+
+  <h2>
+    <%= @article.title %>
+    <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, article_path(@article), method: :delete, data: { confirm: "Are you sure to delete  this article?" }%>
+    <%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_article_path(@article) %>
+  </h2>
+  <hr>
+
+
+  <%= raw(@md_content) %>
+</div>
+
+
